@@ -1,10 +1,9 @@
 .PHONY: up demo logs down clean
 
-LOCAL_LAM_DIR ?= $(LAM_V2_DIR)
-LOCAL_LAM_DIR ?= ../lam/lam-v2
+LAM_V2_DIR ?= ../lam/lam-v2
 COMPOSE_FILES := -f compose.yml
 
-ifneq (,$(wildcard $(LOCAL_LAM_DIR)/Dockerfile))
+ifneq (,$(wildcard $(LAM_V2_DIR)/Dockerfile))
 COMPOSE_FILES += -f compose.local.yml
 endif
 

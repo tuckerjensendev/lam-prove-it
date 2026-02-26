@@ -3,6 +3,8 @@ services:
     build:
       context: ${LAM_V2_DIR:-../lam/lam-v2}
     image: lam-prove-it-lam:local
+    pull_policy: never
 
   lam_worker:
     image: lam-prove-it-lam:local
+    pull_policy: never
