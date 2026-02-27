@@ -4,7 +4,7 @@ Goal: feel “proof-carrying memory” in minutes.
 
 ## Quickstart
 
-Prereqs: Docker (Compose v2).
+Prereqs: Docker (Compose v2). `make` is recommended (macOS/Linux).
 
 From this folder:
 
@@ -12,10 +12,23 @@ From this folder:
 make demo
 ```
 
+No `make`? Run:
+
+```bash
+docker compose up -d --build
+docker compose exec -T demo node /demo/hello-world.mjs
+```
+
 Then tear down:
 
 ```bash
 make down
+```
+
+No `make`? Tear down with:
+
+```bash
+docker compose down -v --remove-orphans
 ```
 
 ## Public vs local builds
