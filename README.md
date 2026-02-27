@@ -2,24 +2,46 @@
 
 Goal: feel “proof-carrying memory” in minutes.
 
-## Quickstart
+## What you need
 
-Prereqs: Docker (Compose v2). `make` is recommended (macOS/Linux).
+Everything runs in Docker. You do **not** need Node.js, Postgres, or any LAM code locally.
 
-From this folder:
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (includes `docker compose`)
+- Either:
+  - [Git](https://git-scm.com/downloads) (recommended)
+  - Or download this repo as a ZIP and unzip it (GitHub → “Code” → “Download ZIP”)
+- Optional: `make` (recommended on macOS/Linux; not required)
+
+Windows note: Docker Desktop will prompt you to enable/install WSL2 (and may require a reboot).
+
+## Quickstart (once Docker is installed)
+
+### Option A: macOS/Linux (with `make`)
 
 ```bash
+git clone https://github.com/tuckerjensendev/lam-prove-it.git
+cd lam-prove-it
 make demo
 ```
 
-No `make`? Run:
+### Option B: Windows 11 (PowerShell; no `make` required)
 
 ```bash
-docker compose up -d --build
+git clone https://github.com/tuckerjensendev/lam-prove-it.git
+cd lam-prove-it
+docker compose up -d
 docker compose exec -T demo node /demo/hello-world.mjs
 ```
 
-Then tear down:
+No Git? Download ZIP and then:
+
+```bash
+cd path\to\lam-prove-it
+docker compose up -d
+docker compose exec -T demo node /demo/hello-world.mjs
+```
+
+## Tear down
 
 ```bash
 make down
