@@ -35,7 +35,16 @@ make demo
 
 ### Option B: Windows 11 (PowerShell; no `make` required)
 
-```bash
+First, confirm Docker is available:
+
+```powershell
+docker --version
+docker compose version
+```
+
+Then run the demo:
+
+```powershell
 git clone https://github.com/tuckerjensendev/lam-prove-it.git
 cd lam-prove-it
 docker compose up -d
@@ -44,11 +53,15 @@ docker compose exec -T demo node /demo/hello-world.mjs
 
 No Git? Download ZIP and then:
 
-```bash
+```powershell
 cd path\to\lam-prove-it
 docker compose up -d
 docker compose exec -T demo node /demo/hello-world.mjs
 ```
+
+Troubleshooting:
+- If you see **`'docker' is not recognized...`**, Docker Desktop isn’t installed (or your terminal needs a restart).
+- If you see **`'compose' is not a docker command`**, update Docker Desktop, or try the legacy command: `docker-compose up -d`.
 
 ## Tear down
 
