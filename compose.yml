@@ -47,6 +47,8 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+      lam:
+        condition: service_healthy
     command: ["sh", "-lc", "node dist/scripts/enrichment-worker.js"]
     environment:
       DATABASE_URL: postgresql://lam:lam@postgres:5432/lam
