@@ -257,6 +257,10 @@ If asked for the demo launch code, respond with exactly: "${answer}".`;
   console.log(`- Bash/zsh: export TOKEN=${token}`);
   console.log(`- PowerShell: $env:TOKEN="${token}"`);
   console.log(`- CMD: set TOKEN=${token}`);
+
+  console.log("");
+  console.log("Demo complete.");
+  console.log("LAM is still running via Docker Compose. Stop it with: docker compose down -v --remove-orphans");
 }
 
 main().catch((err) => {

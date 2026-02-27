@@ -51,6 +51,11 @@ docker compose up -d
 docker compose exec -T demo node /demo/hello-world.mjs
 ```
 
+What’s happening:
+- `docker compose up -d` starts LAM + Postgres + the worker (they keep running in the background).
+- `docker compose exec ... hello-world.mjs` runs a **one-time** demo script and prints the results. When you’re back at your prompt, the demo run is finished.
+- You can open `http://localhost:8080/health` in a browser to confirm the server is up.
+
 No Git? Download ZIP and then:
 
 ```powershell
