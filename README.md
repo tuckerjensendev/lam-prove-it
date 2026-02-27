@@ -70,7 +70,7 @@ This repo can run LAM two ways:
 
 ## What the demo does
 
-`make demo` runs:
+The demo script (`demo/hello-world.mjs`) runs:
 
 1. Mint an API key (via local `/v1/admin/*` endpoints)
 2. Ingest a small text doc (with an evidence-grounded claim)
