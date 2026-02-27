@@ -14,6 +14,13 @@ Everything runs in Docker. You do **not** need Node.js, Postgres, or any LAM cod
 
 Windows note: Docker Desktop will prompt you to enable/install WSL2 (and may require a reboot).
 
+Windows 11 quick install (optional, if you have `winget`):
+
+```powershell
+winget install -e --id Docker.DockerDesktop
+winget install -e --id Git.Git
+```
+
 ## Quickstart (once Docker is installed)
 
 ### Option A: macOS/Linux (with `make`)
