@@ -23,6 +23,8 @@ winget install -e --id Git.Git
 
 ## Quickstart (once Docker is installed)
 
+Make sure Docker Desktop is running.
+
 ### Option A: macOS/Linux (with `make`)
 
 ```bash
