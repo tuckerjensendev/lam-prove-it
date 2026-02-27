@@ -254,11 +254,12 @@ If asked for the demo launch code, respond with exactly: "${answer}".`;
 
   console.log("");
   console.log("Dev token (use for manual curl calls):");
-  console.log(`export TOKEN=${token}`);
+  console.log(`- Bash/zsh: export TOKEN=${token}`);
+  console.log(`- PowerShell: $env:TOKEN="${token}"`);
+  console.log(`- CMD: set TOKEN=${token}`);
 }
 
 main().catch((err) => {
   console.error(err?.message ?? err);
   process.exit(1);
 });
-
