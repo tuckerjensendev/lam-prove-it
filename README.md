@@ -62,6 +62,7 @@ docker compose exec -T demo node /demo/hello-world.mjs
 Troubleshooting:
 - If you see **`'docker' is not recognized...`**, Docker Desktop isn’t installed (or your terminal needs a restart).
 - If you see **`'compose' is not a docker command`**, update Docker Desktop, or try the legacy command: `docker-compose up -d`.
+- If you see **`open //./pipe/docker_engine: The system cannot find the file specified`**, Docker Desktop isn’t running yet (or WSL2 install isn’t finished). Start Docker Desktop, wait for “Running”, then retry in a new terminal.
 
 ## Tear down
 
