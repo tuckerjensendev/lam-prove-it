@@ -48,4 +48,5 @@ Both return decodeable citations (`passage_id`) you can mechanically verify via 
 ## Notes
 
 - This Compose file uses **dev-only** defaults for `LAM_MASTER_KEY_B64` and `LAM_ADMIN_TOKEN`. Don’t reuse them in production.
+- LAM is published on **localhost only** by default (`127.0.0.1:${LAM_DEMO_HTTP_PORT:-8080}`) to avoid exposing dev admin endpoints to your LAN.
 - If `8080` is already in use, run: `LAM_DEMO_HTTP_PORT=18080 make demo`

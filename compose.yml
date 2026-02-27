@@ -32,7 +32,8 @@ services:
       LAM_CELL_DIR: /data/cells
       LAM_REJECT_CLIENT_SCOPE: "1"
     ports:
-      - "${LAM_DEMO_HTTP_PORT:-8080}:8080"
+      # Bind to localhost to avoid exposing dev-only admin defaults to your LAN.
+      - "127.0.0.1:${LAM_DEMO_HTTP_PORT:-8080}:8080"
     volumes:
       - ./data/cells:/data/cells
     healthcheck:
