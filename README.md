@@ -2,6 +2,10 @@
 
 Goal: feel “proof-carrying memory” in minutes.
 
+## Contact
+
+For questions, demos, private access, or anything LAM-related, contact Tucker at `tucker@lam-protocol.com`.
+
 ## What you need
 
 Everything runs in Docker. You do **not** need Node.js, Postgres, or any LAM code locally.
